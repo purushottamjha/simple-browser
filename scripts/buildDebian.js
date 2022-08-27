@@ -20,14 +20,14 @@ function toArch (platform) {
 
 require('./createPackage.js')('linux', { arch: toArch(platform) }).then(function (path) {
   var installerOptions = {
-    artifactName: 'min-${version}-${arch}.deb',
-    packageName: 'min',
+    artifactName: 'simplebrowser-${version}-${arch}.deb',
+    packageName: 'simplebrowser',
     icon: 'icons/icon256.png',
     category: 'Network;WebBrowser',
     packageCategory: 'Network',
     mimeTypes: ['x-scheme-handler/http', 'x-scheme-handler/https', 'text/html'],
-    maintainer: 'Min Developers <280953907a@zoho.com>',
-    description: 'Min is a fast, minimal browser that protects your privacy.',
+    maintainer: 'Simple Developers <280953907a@zoho.com>',
+    description: 'Simple is a fast, minimal browser that protects your privacy.',
     synopsis: 'A web browser with smarter search, improved tab management, and built-in ad blocking. Includes full-text history search, instant answers from DuckDuckGo, the ability to split tabs into groups, and more.',
     depends: [
       'libsecret-1-0',
