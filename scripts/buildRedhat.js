@@ -20,7 +20,7 @@ require('./createPackage.js')('linux', { arch: Arch.x64 }).then(function (path) 
   var installerOptions = {
     artifactName: 'simplebrowser-${version}-${arch}.rpm',
     packageName: 'simplebrowser',
-    icon: 'icons/icon256.png',
+    icon: 'icons/256x256.png',
     category: 'Network',
     packageCategory: 'Network',
     mimeTypes: ['x-scheme-handler/http', 'x-scheme-handler/https', 'text/html'],

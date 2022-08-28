@@ -185,7 +185,7 @@ function createWindowWithBounds (bounds) {
     minHeight: 350,
     titleBarStyle: settings.get('useSeparateTitlebar') ? 'default' : 'hidden',
     trafficLightPosition: { x: 12, y: 10 },
-    icon: __dirname + '/icons/icon256.png',
+    icon: __dirname + '/icons/256x256.png',
     frame: settings.get('useSeparateTitlebar'),
     alwaysOnTop: settings.get('windowAlwaysOnTop'),
     backgroundColor: '#fff', // the value of this is ignored, but setting it seems to work around https://github.com/electron/electron/issues/10559

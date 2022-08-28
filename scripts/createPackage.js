@@ -75,7 +75,7 @@ module.exports = function (platform, extraOptions) {
     },
     win: {
       target: 'dir',
-      icon: 'icons/icon256.ico'
+      icon: 'icons/icon.ico'
     },
     mac: {
       icon: 'icons/icon.icns',
