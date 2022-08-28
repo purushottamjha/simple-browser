@@ -83,7 +83,7 @@ ipc.handle('credentialStoreGetCredentials', async function () {
 
 setTimeout(function () {
   if (!settings.get('v1_23_keychainMigrationComplete')) {
-    keytar.findCredentials('Min saved password').then(function (results) {
+    keytar.findCredentials('Simple Browser saved password').then(function (results) {
       results.forEach(function (result) {
         credentialStoreSetPassword({
           domain: JSON.parse(result.account).domain,
