@@ -1,5 +1,9 @@
 name: Build Package
-on: [workflow_dispatch]
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 jobs:
   buildMac:
     runs-on: macos-11
@@ -52,3 +56,24 @@ jobs:
         path: |
           dist/app/*.deb
           dist/app/*.rpm
+  pre-release:
+    name: "Pre Release"
+    runs-on: "ubuntu-latest"
+
+    steps:
+      # ...
+      - name: "Build & test"
+        run: |
+          echo "done!"
+
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: true
+          title: "Development Build"
+          files: |
+            dist/app/*.deb
+            dist/app/*.rpm
+            dist/app/*.zip
+            dist/app/*.exe
