@@ -32,7 +32,7 @@ jobs:
           })
 
           res.data.artifacts
-            .filter(({ name }) => name === 'package')
+            .filter(({ name }) => name === 'mac-package')
             .forEach(({ id }) => {
               github.rest.actions.deleteArtifact({
                 owner: context.repo.owner,
@@ -68,7 +68,7 @@ jobs:
           })
 
           res.data.artifacts
-            .filter(({ name }) => name === 'package')
+            .filter(({ name }) => name === 'windows-package')
             .forEach(({ id }) => {
               github.rest.actions.deleteArtifact({
                 owner: context.repo.owner,
@@ -106,7 +106,7 @@ jobs:
           })
 
           res.data.artifacts
-            .filter(({ name }) => name === 'package')
+            .filter(({ name }) => name === 'linux-package')
             .forEach(({ id }) => {
               github.rest.actions.deleteArtifact({
                 owner: context.repo.owner,
