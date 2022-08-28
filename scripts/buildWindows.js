@@ -31,7 +31,7 @@ async function afterPackageBuilt (packagePath) {
       src: packagePath,
       dest: 'dist/app/simplebrowser-installer-x64',
       icon: 'icons/icon.ico',
-      animation: 'icons/windows-installer.gif',
+      animation: 'icons/512x512.png',
       licenseUrl: 'https://github.com/minbrowser/min/blob/master/LICENSE.txt',
       noMsi: true
     }
