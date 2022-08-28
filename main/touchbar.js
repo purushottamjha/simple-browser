@@ -52,10 +52,7 @@ function buildTouchBar () {
       }),
       new TouchBarButton({
         accessibilityLabel: l('viewTasks'),
-        icon: getTouchBarIcon('NSImageNameTouchBarListViewTemplate'),
-        click: function () {
-          sendIPCToWindow(mainWindow, 'toggleTaskOverlay')
-        }
+        icon: getTouchBarIcon('NSImageNameTouchBarListViewTemplate')
       })
     ]
   })

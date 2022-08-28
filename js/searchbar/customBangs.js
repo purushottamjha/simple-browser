@@ -32,24 +32,12 @@ function moveToTaskCommand (taskId) {
 
   browserUI.switchToTask(newTask.id)
   browserUI.switchToTab(currentTab.id)
-
-  taskOverlay.show()
-
-  setTimeout(function () {
-    taskOverlay.hide()
-  }, 600)
 }
 
 function switchToTaskCommand (taskId) {
   /* disabled in focus mode */
   if (focusMode.enabled()) {
     focusMode.warn()
-    return
-  }
-
-  // no task was specified, show all of the tasks
-  if (!taskId) {
-    taskOverlay.show()
     return
   }
 
@@ -249,9 +237,7 @@ function initialize () {
       if (text) {
       // switch to the first search result
         switchToTaskCommand(searchAndSortTasks(text)[0].task.id)
-      } else {
-        taskOverlay.show()
-      }
+      } 
     }
   })
 
@@ -265,8 +251,6 @@ function initialize () {
         focusMode.warn()
         return
       }
-
-      taskOverlay.show()
 
       setTimeout(function () {
         browserUI.addTask()
@@ -289,16 +273,6 @@ function initialize () {
         taskToClose = getTaskByNameOrNumber(text)
       } else {
         taskToClose = tasks.getSelected()
-      }
-
-      if (taskToClose) {
-        browserUI.closeTask(taskToClose.id)
-        if (currentTask.id === taskToClose.id) {
-          taskOverlay.show()
-          setTimeout(function () {
-            taskOverlay.hide()
-          }, 600)
-        }
       }
     }
   })
