@@ -139,7 +139,7 @@
     "settingsBlockScriptsToggle": "Block scripts",
     "settingsBlockImagesToggle": "Block images",
     "settingsBlockedRequestCount": {
-      "unsafeHTML": "So far, Min has blocked <strong></strong> ads and trackers."
+      "unsafeHTML": "So far, Simple Browser has blocked <strong></strong> ads and trackers."
     },
     "settingsCustomBangs": "Custom bangs",
     "settingsCustomBangsAdd": "Add custom bang",
