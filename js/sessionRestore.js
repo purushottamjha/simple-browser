@@ -43,30 +43,7 @@ const sessionRestore = {
       console.warn('failed to read session restore data', e)
     }
 
-    /*
-    Disabled - show a user survey on startup
-    // the survey should only be shown after an upgrade from an earlier version
-    var shouldShowSurvey = false
-    if (savedStringData && !localStorage.getItem('1.15survey')) {
-      shouldShowSurvey = true
-    }
-    localStorage.setItem('1.15survey', 'true')
-    */
-
     try {
-      // first run, show the tour
-      if (!savedStringData) {
-        tasks.setSelected(tasks.add()) // create a new task
-
-        var newTab = tasks.getSelected().tabs.add({
-          url: 'https://minbrowser.github.io/min/tour'
-        })
-        browserUI.addTab(newTab, {
-          enterEditMode: false
-        })
-        return
-      }
-
       var data = JSON.parse(savedStringData)
 
       // the data isn't restorable
@@ -110,33 +87,8 @@ const sessionRestore = {
           browserUI.addTask()
         }
       }
-
-      /* Disabled - show user survey
-      // if this isn't the first run, and the survey popup hasn't been shown yet, show it
-      if (shouldShowSurvey) {
-        fetch('https://minbrowser.org/survey/survey15.json').then(function (response) {
-          return response.json()
-        }).then(function (data) {
-          setTimeout(function () {
-            if (data.available && data.url) {
-              if (tasks.getSelected().tabs.isEmpty()) {
-                webviews.update(tasks.getSelected().tabs.getSelected(), data.url)
-                tabEditor.hide()
-              } else {
-                var surveyTab = tasks.getSelected().tabs.add({
-                  url: data.url
-                })
-                browserUI.addTab(surveyTab, {
-                  enterEditMode: false
-                })
-              }
-            }
-          }, 200)
-        })
-      }
-      */
     } catch (e) {
-      // an error occured while restoring the session data
+      // an error occurred while restoring the session data
 
       console.error('restoring session failed: ', e)
 
