@@ -1,5 +1,9 @@
 name: Build Package
-on: [workflow_dispatch]
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 jobs:
   buildMac:
     runs-on: macos-11
