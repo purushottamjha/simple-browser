@@ -13,21 +13,6 @@ html {
   background-color: rgb(250, 188, 43);
 }
 
-.short-hero {
-  position: relative;
-  overflow: hidden;
-}
-.blue-gradient-background {
-  background: linear-gradient(
-    135deg,
-    rgba(80, 122, 196, 1) 43%,
-    rgba(80, 122, 196, 1) 43%,
-    rgba(128, 192, 226, 1) 89%,
-    rgba(128, 192, 226, 1) 89%
-  );
-  color: #fff;
-}
-
 .container {
   max-width: 1000px;
   margin: auto;
