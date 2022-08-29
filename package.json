@@ -2,9 +2,9 @@
   "name": "simplebrowser",
   "productName": "simplebrowser",
   "author": "Simple Browser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A fast, minimal browser that protects your privacy",
-  "electronVersion": "19.0.5",
+  "electronVersion": "20.1.0",
   "main": "main.build.js",
   "standard": {
     "globals": [

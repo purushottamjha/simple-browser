@@ -361,12 +361,6 @@ function buildAppMenu (options = {}) {
       label: l('appMenuHelp'),
       role: 'help',
       submenu: [
-        {
-          label: l('appMenuKeyboardShortcuts'),
-          click: function () {
-            openTabInWindow('https://github.com/minbrowser/min/wiki#keyboard-shortcuts')
-          }
-        },
         ...(process.platform !== 'darwin' ? [{ type: 'separator' }] : []),
         ...(process.platform !== 'darwin' ? [{
           label: l('appMenuAbout').replace('%n', app.name),
