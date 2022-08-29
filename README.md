@@ -10,25 +10,12 @@ Simple Browser is a fast, minimal browser that protects your privacy. It include
 - Password manager integration
 - Dark theme
 
-## Installing
-
-You can find prebuilt binaries for Min [here](https://github.com/minbrowser/min/releases). Alternatively, skip to the section below for instructions on how to build Min directly from source.
-
 ### Installation on Linux
 
 - To install the .deb file, use `sudo dpkg -i /path/to/download`
 - To install the RPM build, use `sudo rpm -i /path/to/download --ignoreos`
 - On Arch Linux it's in the community repository, use `sudo pacman -Sy min`
 - On Raspberry Pi, you can install Min from [Pi-Apps](https://github.com/Botspot/pi-apps).
-
-## Developing
-
-If you want to develop Min:
-
-- Install [Node](https://nodejs.org).
-- Run `npm install` to install dependencies.
-- Start Min in development mode by running `npm run start`.
-- After you make changes, you can press `ctrl+r` (or `cmd+r` on Mac) twice to restart the browser.
 
 ### Building binaries
 
