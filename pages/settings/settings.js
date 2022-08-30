@@ -2,8 +2,6 @@ document.title = l('settingsPreferencesHeading') + ' | Simple Browser'
 
 var contentTypeBlockingContainer = document.getElementById('content-type-blocking')
 var banner = document.getElementById('restart-required-banner')
-var siteThemeCheckbox = document.getElementById('checkbox-site-theme')
-var showDividerCheckbox = document.getElementById('checkbox-show-divider')
 var userscriptsCheckbox = document.getElementById('checkbox-userscripts')
 var separateTitlebarCheckbox = document.getElementById('checkbox-separate-titlebar')
 var openTabsInForegroundCheckbox = document.getElementById('checkbox-open-tabs-in-foreground')
@@ -216,20 +214,6 @@ darkModeSystem.addEventListener('change', function (e) {
   }
 })
 
-/* site theme setting */
-
-settings.get('siteTheme', function (value) {
-  if (value === true || value === undefined) {
-    siteThemeCheckbox.checked = true
-  } else {
-    siteThemeCheckbox.checked = false
-  }
-})
-
-siteThemeCheckbox.addEventListener('change', function (e) {
-  settings.set('siteTheme', this.checked)
-})
-
 /* userscripts setting */
 
 settings.get('userscriptsEnabled', function (value) {
@@ -240,18 +224,6 @@ settings.get('userscriptsEnabled', function (value) {
 
 userscriptsCheckbox.addEventListener('change', function (e) {
   settings.set('userscriptsEnabled', this.checked)
-})
-
-/* show divider between tabs setting */
-
-settings.get('showDividerBetweenTabs', function (value) {
-  if (value === true) {
-    showDividerCheckbox.checked = true
-  }
-})
-
-showDividerCheckbox.addEventListener('change', function (e) {
-  settings.set('showDividerBetweenTabs', this.checked)
 })
 
 /* separate titlebar setting */

@@ -204,13 +204,6 @@ const tabBar = {
       delete tabBar.tabElementMap[tabId]
     }
   },
-  handleDividerPreference: function (dividerPreference) {
-    if (dividerPreference === true) {
-      tabBar.navBar.classList.add('show-dividers')
-    } else {
-      tabBar.navBar.classList.remove('show-dividers')
-    }
-  },
   initializeTabDragging: function () {
     tabBar.dragulaInstance = dragula([], {
       direction: 'horizontal',
@@ -243,10 +236,6 @@ const tabBar = {
     tabBar.dragulaInstance.containers = []
   }
 }
-
-settings.listen('showDividerBetweenTabs', function (dividerPreference) {
-  tabBar.handleDividerPreference(dividerPreference)
-})
 
 /* tab loading and progress bar status */
 webviews.bindEvent('did-start-loading', function (tabId) {
