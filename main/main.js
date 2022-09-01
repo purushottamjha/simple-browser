@@ -1,6 +1,7 @@
 const electron = require('electron')
 const fs = require('fs')
 const path = require('path')
+require('v8-compile-cache');
 
 const {
   app, // Module to control application life.
