@@ -1,2 +1,4 @@
 dist
 ext
+**/.git
+**/node_modules

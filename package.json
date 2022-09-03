@@ -54,6 +54,8 @@
     "electron-packager": "16.0.0 ",
     "electron-rebuild": "^3.2.7",
     "electron-renderify": "0.0.2",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "prebuild-install": "^7.0.1",
     "prettier": "^2.2.1",
     "snazzy": "^9.0.0",
@@ -81,10 +83,13 @@
     "updateFilters": "node ./ext/filterLists/updateEasylist.js",
     "updateHttpsList": "node ./ext/httpsUpgrade/updateHttpsList.js",
     "updateSuffixes": "node ./ext/publicSuffixes/updateSuffixes.js",
-    "lint": "prettier --write **/**/*.css **/**/*.md **/**/*.html **/**/*.json && standard --fix js/**/*.js main/*.js | snazzy"
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/minbrowser/min.git"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
