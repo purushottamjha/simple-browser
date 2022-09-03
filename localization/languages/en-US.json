@@ -54,6 +54,7 @@
     "runUserscript": "Run userscript",
     
     "openMenu": "Open menu", 
+    "refresh": "Reload",
     "enterReaderView": "Enter reader view",
     "exitReaderView": "Exit reader view",
     "newTabLabel": "New Tab", 
