@@ -38,7 +38,7 @@
     "node-abi": "^3.8.0",
     "pdfjs-dist": "2.16.105",
     "regedit": "5.1.1 ",
-    "stemmer": "2.0.0",
+    "stemmer": "^1.0.5",
     "string_score": "^0.1.22",
     "v8-compile-cache": "^2.3.0"
   },
