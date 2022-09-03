@@ -13,7 +13,6 @@
   <body>
     <div class="window-drag-area"></div>
 
-
     <div class="windows-caption-buttons">
       <div class="element caption-minimise">
         <svg>
@@ -121,25 +120,26 @@
         tabindex="-1"
       ></button>
 
-      <button id="refresh-button"
-          class="navbar-action-button i carbon:restart"
-          data-label="refresh"
-          tabindex="-1">
-        </button>
+      <button
+        id="refresh-button"
+        class="navbar-action-button i carbon:restart"
+        data-label="refresh"
+        tabindex="-1"
+      ></button>
 
       <div id="toolbar-navigation-buttons" hidden>
-          <button
+        <button
           id="back-button"
           class="navbar-action-button i carbon:chevron-left"
           data-label="goBack"
           tabindex="-1"
         ></button>
         <button
-        id="forward-button"
-        class="navbar-action-button i carbon:chevron-right"
-        data-label="goForward"
-        tabindex="-1"
-      ></button>
+          id="forward-button"
+          class="navbar-action-button i carbon:chevron-right"
+          data-label="goForward"
+          tabindex="-1"
+        ></button>
       </div>
       <div id="tabs">
         <div id="tab-editor" hidden>
@@ -171,8 +171,7 @@
         <i id="rightArrow" class="i carbon:chevron-right"></i>
       </div>
       <img id="webview-placeholder" hidden aria-hidden="true" />
-      <div id="ntp-content">
-      </div>
+      <div id="ntp-content"></div>
     </div>
 
     <!-- findinpage ui -->
@@ -272,8 +271,8 @@
         ></button>
       </span>
       <button
-      id="password-capture-never-save"
-      data-string="passwordCaptureNeverSave"
+        id="password-capture-never-save"
+        data-string="passwordCaptureNeverSave"
       ></button>
     </div>
 
